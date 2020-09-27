@@ -22,3 +22,12 @@ func (s AttrSuite) TestNewAttributes() {
 	s.Equal("test", attrs["label"])
 	s.Equal("box", attrs["shape"])
 }
+
+
+func (s AttrSuite) TestPeriodAttributes() {
+	attrs := New()
+
+	attrs.Set(Label("example.com"))
+
+	s.Equal("example.com", attrs["label"])
+}
